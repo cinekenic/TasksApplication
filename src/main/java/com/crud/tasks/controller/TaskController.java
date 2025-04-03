@@ -1,4 +1,4 @@
-package com.crud.tasks.com.crud.tasks.controller;
+package com.crud.tasks.controller;
 
 import com.crud.tasks.domain.TaskDto;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,7 @@ public class TaskController {
 
 //    @RequestMapping(method = RequestMethod.GET, value = "/{taskId}")
     @GetMapping("/{taskId}")
-    public TaskDto getTask(Long taskId) {
+    public TaskDto getTask(@PathVariable Long taskId) {
         return new TaskDto(1L, "test title", "test_content");
     }
 
